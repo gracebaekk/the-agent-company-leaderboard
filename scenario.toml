@@ -1,16 +1,23 @@
 [green_agent]
-agentbeats_id = ""
-env = { API_KEY = "${GITHUB_SECRET_NAME}", LOG_LEVEL = "INFO" }
+agentbeats_id = "019b4ca3-ef8b-7481-ab7c-1e5ce672152a"
+env = { OPENAI_API_KEY = "${OPENAI_API_KEY}" }
 
 [[participants]]
 agentbeats_id = ""
-name = "role_1_name"
-env = {}
-
-[[participants]]
-agentbeats_id = ""
-name = "role_2_name"
-env = {}
+name = "agent"
+env = { OPENAI_API_KEY = "${OPENAI_API_KEY}" }
 
 [config]
-# Add your assessment config here
+# The Agent Company benchmark configuration
+# List the specific tasks to run in the assessment
+task_names = [
+  "pm-send-hello-message",
+  "finance-qualified-bill-ask-for-reimburse",
+  "hr-check-attendance-one-day",
+  "pm-change-channel-ownership",
+  "pm-add-new-moderator",
+  "pm-update-sprint-cycles",
+  "hr-check-attendance-multiple-days",
+  "pm-schedule-meeting-1",
+  "finance-nonqualified-bill-ask-for-reimburse"
+]
